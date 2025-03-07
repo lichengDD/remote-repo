@@ -1,0 +1,76 @@
+isEmpty() 判断字符串是否为空
+substring(起始位置，结束位置（不写则代表切割到末尾）) 切割字符串
+equqls() 判断字符串是否相等
+charAt() 获取字符串某一位置的字符
+length 获取数组长度（无括号） length() 获取字符串长度（有括号）
+list.contains("") 判断list中是否存在字符
+asList() 将数组转换成 list
+Math.min(值1，值2)；获取最小值 最大值为max
+size() 获取ArrayList的长度 与length区分
+replace(待替换，替换) 替换字符串中的某一字符串或字符
+String str = Integer.toString(x) 整形转String型
+int num = Integer.parseInt(str);String型转整型
+双指针（两边向中间走，适用判断回文数类型）：
+StringBuilder() 可变字符串，可在字符串后面进行添加，调用append（）；
+reverse() 倒转字符串
+int num = 123;
+String str = String.valueOf(num);//数字转换成字符串
+ while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            } else {
+                left++;
+                right--;
+            }
+
+        }
+
+ Math.sqrt(c) 求c的平方根
+ Integer.MAX_VALUE;最大整型数
+ Integer.MIN_VALUE;最小整型数
+
+让某一个字符等于某个数，映射：
+	1、 创建一个数组，用于存储字符到整数的映射
+        int[] charMap = new int[Character.MAX_VALUE + 1];
+    2、将 '(' 和 ')' 都映射到 1
+        charMap['('] = 1;
+        charMap[')'] = 1;
+        char testChar1 = '(';
+        char testChar2 = ')';
+        System.out.println("字符 '(' 的映射值是: " + charMap[testChar1]); // 输出: 字符 '(' 的映射值是: 1
+        System.out.println("字符 ')' 的映射值是: " + charMap[testChar2]); // 输出: 字符 ')' 的映射值是: 1
+        
+		Map<Character, Integer> map = new HashMap<>();
+		map.put('c', 1);
+
+		Set<Integer> set = new HashSet<>();
+		set.add(1);
+		String l = "abcde";
+
+		double u = 3.56785;
+		
+		StringBuilder sb2=new StringBuilder();
+		
+		sb2.append(l);
+		sb2.append('c');
+		sb2.append(2);
+		sb2.reverse();
+			
+		int r = 9;
+
+		boolean result1 = set.add(1);
+		boolean result2 = set.add(2);
+
+		String s = l.replace('a', 'p');
+		String p = l.substring(0, 3); // 左闭右开0，1，2 ，不包括3
+
+		boolean isP = l.contains("cde");
+
+		System.out.print(result1 + "\n");
+		System.out.print(map.get('c') + "\n");
+		System.out.print(s.charAt(0) + "\n");
+		System.out.print(p + "\n");
+		System.out.print(isP + "\n");
+		System.out.printf("%.2f", Math.sqrt(r));
+		System.out.print("\n");
+		System.out.print(sb2);// 保留两位小数，四舍五入
